@@ -1,0 +1,27 @@
+import sys
+import os
+import time
+
+a = 1
+print("time-Показать локальное время")
+print("exit-Завершить программу")
+print("date-Показать дату")
+print("info-Информация о программе")
+print("clear-Очистить консоль")
+while a == 1:
+    tim = str(input("\n"))
+    if tim == 'time':
+        print('now is', time.strftime("%X"))
+    elif tim == 'date':
+        print(time.strftime("%x"))
+    elif tim == 'exit':
+        sys.exit()
+    elif tim == 'info':
+        print("Program name: Date_and_Time")
+        print("Version: 1.0")
+        print("Made: TRUINGlol")
+        print(sys.platform)
+    elif tim == 'clear':
+        os.system('cls' if os.name == 'nt' else 'clear')
+    else:
+        print("Error")
